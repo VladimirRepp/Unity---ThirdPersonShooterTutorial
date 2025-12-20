@@ -1,0 +1,147 @@
+using UnityEngine;
+
+/// <summary>
+/// Все состояния врага вынесены в отдельные компоненты
+/// </summary>
+public class HardEnemyBehavior : MonoBehaviour
+{
+    [Header("State Settings")]
+    [SerializeField] private AttackState _attackState;
+    [SerializeField] private PatrolState _patrolState;
+    [SerializeField] private DeadState _deadState;
+    [SerializeField] private TakeDamageState _takeDamageState;
+
+    [Header("Animation Settings")]
+    [SerializeField] private Animator animator;
+
+    [Header("Debug views-only")]
+    [SerializeField] private EStateEnemy _currentState = EStateEnemy.Startup;
+
+    private DamageableObject _myDamageable;
+    private SphereCollider _detectionCollider;
+
+    private bool _isLockChangeState = false;
+
+    private GameObject _currentTarget;
+    private string _playerTag;
+
+    public GameObject Target => _currentTarget;
+
+    private void Awake()
+    {
+        _myDamageable = GetComponent<DamageableObject>();
+        _detectionCollider = GetComponent<SphereCollider>();
+        _detectionCollider.radius = _attackState.AttackRange;
+
+        _playerTag = _attackState.PlayerTag;
+
+        ResetAllStates();
+    }
+
+    private void OnEnable()
+    {
+        if (_myDamageable != null)
+        {
+            _myDamageable.OnDeath += HandleDeath;
+            _myDamageable.OnHealthChanged += HandleHealthChanged;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (_myDamageable != null)
+        {
+            _myDamageable.OnDeath -= HandleDeath;
+            _myDamageable.OnHealthChanged -= HandleHealthChanged;
+        }
+    }
+
+    private void Start()
+    {
+        StateChanges(EStateEnemy.Patrol);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(_playerTag))
+        {
+            _currentTarget = other.gameObject;
+            StateChanges(EStateEnemy.Attack);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag(_playerTag))
+        {
+            StateChanges(EStateEnemy.Patrol);
+        }
+    }
+
+    private void HandleDeath()
+    {
+        StateChanges(EStateEnemy.Dead);
+    }
+
+    private void HandleHealthChanged(float health_value)
+    {
+        StateChanges(EStateEnemy.TakeDamage);
+    }
+
+    private void ResetAllStates()
+    {
+        _attackState.enabled = false;
+        _patrolState.enabled = false;
+        _deadState.enabled = false;
+        _takeDamageState.enabled = false;
+    }
+
+    private void StateChanges(EStateEnemy newState)
+    {
+        if (_currentState == EStateEnemy.Dead)
+            return;
+
+        if (_isLockChangeState && newState != EStateEnemy.Dead)
+            return;
+
+        if (_currentState == newState)
+            return;
+
+        _currentState = newState;
+
+        if (_currentState != EStateEnemy.Attack && _attackState.enabled)
+        {
+            _attackState.ExitState();
+        }
+
+        ResetAllStates();
+
+        if (_currentState == EStateEnemy.Attack)
+        {
+            _attackState.enabled = true;
+            _attackState.EnterState(this, animator);
+            return;
+        }
+
+        if (_currentState == EStateEnemy.TakeDamage)
+        {
+            _takeDamageState.enabled = true;
+            _takeDamageState.EnterState(this, animator);
+            return;
+        }
+
+        if (_currentState == EStateEnemy.Patrol)
+        {
+            _patrolState.enabled = true;
+            _patrolState.EnterState(this, animator);
+            return;
+        }
+
+        if (_currentState == EStateEnemy.Dead)
+        {
+            _deadState.enabled = true;
+            _deadState.EnterState(this, animator);
+            return;
+        }
+    }
+}
