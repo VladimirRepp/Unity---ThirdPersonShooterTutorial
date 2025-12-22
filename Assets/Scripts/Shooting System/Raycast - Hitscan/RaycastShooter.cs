@@ -5,8 +5,9 @@ using UnityEngine;
 /// </summary>
 public class RaycastShooter : MonoBehaviour, IShooter
 {
-    public float range = 100f;
-    public LayerMask hitMask;
+    [Header("RaycastShooter Settings")]
+    [SerializeField] private float range = 1000f;
+    [SerializeField] private LayerMask hitMask;
 
     private Weapon _weapon;
 
@@ -17,8 +18,7 @@ public class RaycastShooter : MonoBehaviour, IShooter
 
     public void Shoot()
     {
-        // TODO: по направлению в перед или сразу по центу ? 
-        Ray ray = new Ray(_weapon.ShootPoint.position, _weapon.ShootPoint.forward);
+        Ray ray = new(_weapon.ShootPoint.position, _weapon.ShootPoint.forward);
 
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitMask))
         {

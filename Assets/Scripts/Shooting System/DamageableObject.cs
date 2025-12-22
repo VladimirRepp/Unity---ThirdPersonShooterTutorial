@@ -12,8 +12,12 @@ public class DamageableObject : MonoBehaviour, IDamageable
     [SerializeField] private bool isDestroyAfterDeath = false;
     [SerializeField] private float destroyDelay = 2f;
 
-    private float currentHealth;
-    public float CurrentHealth => currentHealth;
+    [Header("Debug Settings")]
+    [SerializeField] private bool isViewDebug = false;
+
+    private float _currentHealth;
+
+    public float CurrentHealth => _currentHealth;
     public float MaxHealth => maxHealth;
 
     public Action<float> OnHealthChanged;
@@ -21,15 +25,16 @@ public class DamageableObject : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        currentHealth = maxHealth;
+        _currentHealth = maxHealth;
     }
 
     public void TakeDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
     {
-        currentHealth -= damage;
-        OnHealthChanged?.Invoke(currentHealth);
+        _currentHealth -= damage;
+        OnHealthChanged?.Invoke(_currentHealth);
 
-        Debug.Log($"{gameObject.name} получил {damage} урона. Здоровье: {currentHealth}/{maxHealth}");
+        if (isViewDebug)
+            Debug.Log($"{gameObject.name} получил {damage} урона. Здоровье: {_currentHealth}/{maxHealth}");
 
         // Спавним эффект попадания
         if (hitEffect != null)
@@ -40,7 +45,7 @@ public class DamageableObject : MonoBehaviour, IDamageable
             //Destroy(effect, 2f);
         }
 
-        if (currentHealth <= 0)
+        if (_currentHealth <= 0)
         {
             Die();
         }
@@ -53,7 +58,8 @@ public class DamageableObject : MonoBehaviour, IDamageable
 
     private void Die()
     {
-        Debug.Log($"{gameObject.name} погиб/уничтожен!");
+        if (isViewDebug)
+            Debug.Log($"{gameObject.name} погиб/уничтожен!");
         OnDeath?.Invoke();
 
         if (isDestroyAfterDeath)
