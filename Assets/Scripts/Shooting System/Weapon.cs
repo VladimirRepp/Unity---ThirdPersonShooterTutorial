@@ -1,7 +1,7 @@
 using UnityEngine;
 
 /// <summary>
-/// Weapon — базовый компонент оружия. 
+/// Weapon — базовый компонент оружия (фасад). 
 /// Weapon не стреляет сам.
 /// Он лишь делегирует стрельбу компоненту IShooter
 /// </summary>
@@ -10,13 +10,16 @@ public class Weapon : MonoBehaviour
     [Header("Common Settings")]
     [SerializeField] private float damage = 10f;
     [SerializeField] private float fireRate = 0.2f;
-    [SerializeField] private Transform shootPoint;
 
+    // Принципы
     // Raycast:
-    // камера → попадание
+    // Камера → цель
+    // Камера → начало
+    // Пуля → летит в цель
     // Projectile:
-    // камера → точка
-    // ствол → точка
+    // Камера → цель
+    // Оружие → начало
+    // Пуля → летит в цель
 
     // Камера определяет точку прицеливания
     // Пуля летит из ствола в эту точку
@@ -26,7 +29,6 @@ public class Weapon : MonoBehaviour
     private float _nextFireTime;
     private IShooter _shooter;
 
-    public Transform ShootPoint => shootPoint;
     public float Damage => damage;
 
     private void Awake()

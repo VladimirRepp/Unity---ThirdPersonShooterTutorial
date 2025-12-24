@@ -1550,6 +1550,11 @@ Transform:
   - {fileID: 1102775646}
   m_Father: {fileID: 1947139280}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &778839708 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6239134062299939176, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
+  m_PrefabInstance: {fileID: 1125328694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &778841265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2322,6 +2327,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Player - ThirdPerson '
       objectReference: {fileID: 0}
+    - target: {fileID: 6975955754431116638, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 778839708}
+    - target: {fileID: 7664667917112435113, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664667917112435113, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 778839708}
     - target: {fileID: 7780869818254232940, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.22

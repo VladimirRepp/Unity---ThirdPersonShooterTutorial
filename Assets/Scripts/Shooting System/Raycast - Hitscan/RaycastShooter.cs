@@ -6,6 +6,7 @@ using UnityEngine;
 public class RaycastShooter : MonoBehaviour, IShooter
 {
     [Header("RaycastShooter Settings")]
+    [SerializeField] private Camera playerCamera;
     [SerializeField] private float range = 1000f;
     [SerializeField] private LayerMask hitMask;
 
@@ -18,7 +19,7 @@ public class RaycastShooter : MonoBehaviour, IShooter
 
     public void Shoot()
     {
-        Ray ray = new(_weapon.ShootPoint.position, _weapon.ShootPoint.forward);
+        Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitMask))
         {

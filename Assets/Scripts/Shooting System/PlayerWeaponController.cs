@@ -47,7 +47,7 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void OnSwitchWeapon(InputAction.CallbackContext context)
     {
-        _selectedIndexWeapon = _selectedIndexWeapon < _weapons.Length ?
+        _selectedIndexWeapon = _selectedIndexWeapon < _weapons.Length - 1 ?
             _selectedIndexWeapon + 1 : 0;
 
         ActivSelectedWeapon();

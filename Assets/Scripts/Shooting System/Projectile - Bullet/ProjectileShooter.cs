@@ -35,7 +35,7 @@ public class ProjectileShooter : MonoBehaviour, IShooter
 
         bullet.Init(
             _weapon.Damage,
-            _weapon.ShootPoint.forward,
+            direction,
             bulletSpeed,
             bulletPool,
             bulletPool.MaxLifetime
