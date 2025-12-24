@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
         _rb = GetComponent<Rigidbody>();
     }
 
-    public void Update()
+    private void Update()
     {
         CountdownLifetime();
     }
