@@ -208,6 +208,10 @@
 
 <img width="1728" height="966" alt="Снимок экрана 2025-12-24 в 19 34 38" src="https://github.com/user-attachments/assets/fb5c2cd8-4f47-4273-a5c1-affaea14a0a8" />
 
+### FSM для зомби
+
+<img width="642" height="381" alt="FSM - зомби" src="https://github.com/user-attachments/assets/48c721a2-4ef1-40d9-b891-9f52796b94e0" />
+
 
 ---
 
