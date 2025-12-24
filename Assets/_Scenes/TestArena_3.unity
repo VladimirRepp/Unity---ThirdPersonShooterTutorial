@@ -2339,6 +2339,14 @@ PrefabInstance:
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 778839708}
+    - target: {fileID: 7664667917112435113, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
+      propertyPath: aimMask.m_Bits
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664667917112435113, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
+      propertyPath: maxAimDistance
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 7780869818254232940, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.22
