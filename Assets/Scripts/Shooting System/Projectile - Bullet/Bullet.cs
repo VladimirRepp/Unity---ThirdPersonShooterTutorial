@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
         _pool.ReturnBullet(this);
     }
 
-    public void Init(float damage, Vector3 direction, float speed, BulletPool pool, float maxLifetime)
+    public void Startup(float damage, Vector3 direction, float speed, BulletPool pool, float maxLifetime)
     {
         _damage = damage;
         _pool = pool;

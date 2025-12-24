@@ -33,7 +33,7 @@ public class ProjectileShooter : MonoBehaviour, IShooter
         bullet.transform.position = shootPoint.position;
         bullet.transform.rotation = Quaternion.LookRotation(direction);
 
-        bullet.Init(
+        bullet.Startup(
             _weapon.Damage,
             direction,
             bulletSpeed,
