@@ -51,7 +51,6 @@ public class Bullet : MonoBehaviour
         _rb.AddForce(direction * speed, ForceMode.Impulse);
     }
 
-
     private void CountdownLifetime()
     {
         _timeElapsed += Time.deltaTime;
