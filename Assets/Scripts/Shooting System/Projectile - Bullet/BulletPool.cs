@@ -33,7 +33,10 @@ public class BulletPool : MonoBehaviour
     public Bullet GetBullet()
     {
         if (_pool.Count == 0)
+        {
             CreateBullet();
+            Debug.Log("BulletPool.GetBullet: Pool was null, create one bullet");
+        }
 
         Bullet bullet = _pool.Dequeue();
         bullet.gameObject.SetActive(true);
