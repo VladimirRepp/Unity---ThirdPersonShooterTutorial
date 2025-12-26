@@ -15,6 +15,9 @@ public class RaycastShooter : MonoBehaviour, IShooter
     private void Awake()
     {
         _weapon = GetComponent<Weapon>();
+
+        if (playerCamera == null)
+            playerCamera = Camera.main;
     }
 
     public void Shoot()
