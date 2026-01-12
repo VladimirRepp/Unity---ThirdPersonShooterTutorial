@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SurfaceDetector : MonoBehaviour
 {
-    [Header("Настройки обнаружения")]
+    [Header("Detection Settings")]
     [SerializeField] private float raycastDistance = 0.2f;
     [SerializeField] private LayerMask groundLayer = ~0;
     [SerializeField] private Vector3 raycastOffset = new Vector3(0, 0.1f, 0);

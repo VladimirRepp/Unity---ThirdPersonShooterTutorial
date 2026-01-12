@@ -18,15 +18,15 @@ public class PlayerFootstepSounds : MonoBehaviour
         public float landSoundVelocityThreshold = 3f;
     }
 
-    [Header("Компоненты")]
+    [Header("Component Settings")]
     [SerializeField] private CharacterController characterController;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private SurfaceDetector surfaceDetector;
 
-    [Header("Настройки движения")]
+    [Header("Movement Settings")]
     public MovementSettings movementSettings = new MovementSettings();
 
-    [Header("Timing")]
+    [Header("Timing Settings")]
     [SerializeField] private float stepTimer = 0f;
     [SerializeField] private bool wasGroundedLastFrame = true;
     [SerializeField] private float currentStepInterval;

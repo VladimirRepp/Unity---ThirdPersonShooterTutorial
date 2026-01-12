@@ -17,16 +17,16 @@ public class AudioManager : MonoBehaviour
         public PhysicsMaterial PhysicsMaterial; // Альтернатива тегу
     }
 
-    [Header("Настройки")]
+    [Header("Settings")]
     public SurfaceSoundSet defaultSurface;
     public List<SurfaceSoundSet> surfaceSoundSets = new List<SurfaceSoundSet>();
 
-    [Header("Настройки громкости")]
+    [Header("Volumes Settings")]
     [Range(0f, 1f)] public float footstepVolume = 0.5f;
     [Range(0f, 1f)] public float jumpVolume = 0.7f;
     [Range(0f, 1f)] public float landVolume = 0.6f;
 
-    [Header("Настройки рандомизации")]
+    [Header("Random Settings")]
     [Range(0f, 0.5f)] public float pitchRandomness = 0.1f;
 
     private Dictionary<string, SurfaceSoundSet> surfaceDictionary;
