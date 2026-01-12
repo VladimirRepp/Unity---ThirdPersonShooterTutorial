@@ -25,7 +25,7 @@ public class LookAtCameraCenter : MonoBehaviour
             return;
 
         Vector3 aimPoint = GetAimPoint();
-        RotateWeaponTowards(aimPoint);
+        TurnedTowards(aimPoint);
     }
 
     /// <summary>
@@ -46,9 +46,9 @@ public class LookAtCameraCenter : MonoBehaviour
     }
 
     /// <summary>
-    /// Поворачиваем оружие в сторону точки прицеливания
+    /// Поворачиваемся в сторону точки прицеливания
     /// </summary>
-    private void RotateWeaponTowards(Vector3 targetPoint)
+    private void TurnedTowards(Vector3 targetPoint)
     {
         Vector3 direction = (targetPoint - transform.position).normalized;
         Quaternion targetRotation = Quaternion.LookRotation(direction);
