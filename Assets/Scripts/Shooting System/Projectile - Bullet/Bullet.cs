@@ -38,7 +38,8 @@ public class Bullet : MonoBehaviour
             damageable.TakeDamage(_damage, hitPoint, hitNormal);
         }
 
-        _pool.ReturnBullet(this);
+        if (_pool != null)
+            _pool.ReturnBullet(this);
     }
 
     public void Startup(float damage, Vector3 direction, float speed, BulletPool pool, float maxLifetime)
@@ -55,7 +56,8 @@ public class Bullet : MonoBehaviour
     {
         _timeElapsed += Time.deltaTime;
 
-        if (_timeElapsed >= _maxLifetime)
+        if (_timeElapsed >= _maxLifetime &&
+            _pool != null)
             _pool.ReturnBullet(this);
     }
 }

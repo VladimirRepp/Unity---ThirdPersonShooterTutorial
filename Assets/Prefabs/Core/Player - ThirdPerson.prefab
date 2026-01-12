@@ -131,9 +131,10 @@ MonoBehaviour:
   playerCamera: {fileID: 6239134062299939176}
   rotationSpeed: 10
   smoothRotation: 1
-  additionalRotation: {x: 0, y: 0, z: 0}
-  useFixedVerticalAngle: 0
-  fixedVerticalAngle: 0
+  maxAimDistance: 100
+  aimMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2916124130399815626
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +355,14 @@ PrefabInstance:
       propertyPath: aimController
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8614541150667080700, guid: 59ebc9274c09a4cd69ced9ccc1111994, type: 3}
+      propertyPath: bulletSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8614541150667080700, guid: 59ebc9274c09a4cd69ced9ccc1111994, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 6239134062299939176}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
