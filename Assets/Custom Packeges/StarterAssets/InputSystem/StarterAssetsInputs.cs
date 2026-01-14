@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 namespace StarterAssets
 {
+	/// <summary>
+	/// Фасад для ввода (LEGACY -> StarterAssets)
+	/// </summary>
 	public class StarterAssetsInputs : MonoBehaviour
 	{
 		[Header("Character Input Values")]
