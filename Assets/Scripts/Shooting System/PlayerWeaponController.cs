@@ -9,8 +9,13 @@ public class PlayerWeaponController : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private GameObject[] objWeapons;
 
+    // TODO:
+    // Инвентарь -> взять оружее -> 
+    // создать выбранные оружия (Instantiate) -> 
+    // далее примерно также 
+
     private StarterAssets_InputSystem _inputs;
-    private int _selectedIndexWeapon = 0;
+    private int _selectedIndexWeapon = 0; // или ссылку на выбранное оружее 
     private Weapon[] _weapons;
 
     private void OnEnable()
