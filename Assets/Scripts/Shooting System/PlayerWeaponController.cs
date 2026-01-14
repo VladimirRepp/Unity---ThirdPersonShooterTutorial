@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -29,8 +30,18 @@ public class PlayerWeaponController : MonoBehaviour
 
     private void Start()
     {
-        _weapons = new Weapon[objWeapons.Length];
+        InitWeapons();
         ActivSelectedWeapon();
+    }
+
+    private void InitWeapons()
+    {
+        _weapons = new Weapon[objWeapons.Length];
+
+        for (int i = 0; i < objWeapons.Length; i++)
+        {
+            _weapons[i] = objWeapons[i].GetComponent<Weapon>();
+        }
     }
 
     private void ActivSelectedWeapon()
@@ -38,7 +49,6 @@ public class PlayerWeaponController : MonoBehaviour
         for (int i = 0; i < objWeapons.Length; i++)
         {
             objWeapons[i].SetActive(false);
-            _weapons[i] = objWeapons[i].GetComponent<Weapon>();
         }
 
         objWeapons[_selectedIndexWeapon].SetActive(true);
