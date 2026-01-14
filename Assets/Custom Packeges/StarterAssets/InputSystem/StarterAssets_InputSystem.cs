@@ -416,6 +416,17 @@ public partial class @StarterAssets_InputSystem: IInputActionCollection2, IDispo
                 },
                 {
                     ""name"": """",
+                    ""id"": ""328b8ef1-806a-4989-be21-0832fbbd8295"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";KeyboardMouse"",
+                    ""action"": ""SwitchWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5a1147f4-38f6-45d3-ad15-2e139dd89a10"",
                     ""path"": ""<Keyboard>/r"",
                     ""interactions"": """",
