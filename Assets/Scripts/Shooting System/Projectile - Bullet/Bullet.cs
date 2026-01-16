@@ -47,6 +47,7 @@ public class Bullet : MonoBehaviour
         _damage = damage;
         _pool = pool;
         _maxLifetime = maxLifetime;
+        _timeElapsed = 0;
 
         _rb.linearVelocity = Vector3.zero;
         _rb.AddForce(direction * speed, ForceMode.Impulse);

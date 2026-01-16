@@ -25,7 +25,7 @@ public class BulletPool : MonoBehaviour
 
     private void CreateBullet()
     {
-        Bullet bullet = Instantiate(bulletPrefab, transform);
+        Bullet bullet = Instantiate(bulletPrefab);
         bullet.gameObject.SetActive(false);
         _pool.Enqueue(bullet);
     }
