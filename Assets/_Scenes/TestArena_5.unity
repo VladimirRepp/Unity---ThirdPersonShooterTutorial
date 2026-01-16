@@ -127,9 +127,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 212251605}
     m_Modifications:
+    - target: {fileID: 1281777109709822980, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593740209400969595, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746609338591377271, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2318984558347233773, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
       propertyPath: m_Name
       value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2318984558347233773, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5646506152881812864, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6805601039641625375, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -175,6 +195,10 @@ PrefabInstance:
       propertyPath: hintInteractionUI
       value: 
       objectReference: {fileID: 1578618386}
+    - target: {fileID: 8550305201483474149, guid: 9887053bdadc349dc9cc6716f0d84b1e, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3950,10 +3974,6 @@ PrefabInstance:
     - target: {fileID: 1232194414302795336, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
       propertyPath: m_Name
       value: Player - ThirdPerson
-      objectReference: {fileID: 0}
-    - target: {fileID: 3548385020734671269, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
-      propertyPath: aimMask.m_Bits
-      value: 88
       objectReference: {fileID: 0}
     - target: {fileID: 7780869818254232940, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9046,6 +9066,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 212251605}
     m_Modifications:
+    - target: {fileID: 1096963553449624366, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221855487191381378, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2261814824306492765, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
       propertyPath: hintInteractionUI
       value: 
@@ -9090,9 +9118,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2803404038851455493, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243985823874666569, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4510076723071584908, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
       propertyPath: m_Name
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510076723071584908, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6778551196875632362, guid: 6e6196517054a4af888579f4ce98797a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
