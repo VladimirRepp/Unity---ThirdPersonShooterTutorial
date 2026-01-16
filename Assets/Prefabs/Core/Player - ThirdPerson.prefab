@@ -134,7 +134,7 @@ MonoBehaviour:
   maxAimDistance: 100
   aimMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
 --- !u!1 &2916124130399815626
 GameObject:
   m_ObjectHideFlags: 0
