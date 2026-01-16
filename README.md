@@ -210,6 +210,8 @@
 
 ### FSM для зомби
 
+<img width="662" height="511" alt="FSM - Зомби 1" src="https://github.com/user-attachments/assets/bfdd47c4-0db0-49db-b54b-22fdc2533b50" />
+
 <img width="642" height="381" alt="FSM - зомби" src="https://github.com/user-attachments/assets/48c721a2-4ef1-40d9-b891-9f52796b94e0" />
 
 
