@@ -26,6 +26,8 @@ public class Weapon : MonoBehaviour
 
     // Физическая пуля должна лететь не “вперёд из ствола”, а в точку, куда смотрит камера.
 
+    // TODO: добавить звуки, эффекты, отдачу и т.д. 
+
     private float _nextFireTime;
     private IShooter _shooter;
 
