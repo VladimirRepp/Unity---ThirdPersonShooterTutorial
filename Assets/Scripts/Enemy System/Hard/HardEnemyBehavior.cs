@@ -26,6 +26,7 @@ public class HardEnemyBehavior : MonoBehaviour
     private string _playerTag;
 
     public GameObject Target => _currentTarget;
+    public bool IsLockChangeState { get => _isLockChangeState; set => _isLockChangeState = value; }
 
     private void Awake()
     {
@@ -114,7 +115,7 @@ public class HardEnemyBehavior : MonoBehaviour
         _takeDamageState.enabled = false;
     }
 
-    private void StateChanges(EStateEnemy newState)
+    public void StateChanges(EStateEnemy newState)
     {
         if (_currentState == EStateEnemy.Dead)
             return;

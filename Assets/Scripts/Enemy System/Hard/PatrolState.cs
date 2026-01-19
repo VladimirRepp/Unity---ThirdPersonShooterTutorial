@@ -18,11 +18,12 @@ public class PatrolState : MonoBehaviour, IEnemyZombieState
 
     public void ExitState(HardEnemyBehavior enemy = null)
     {
-        throw new System.NotImplementedException();
+        _canPatrol = false;
     }
 
     public void UpdateState(HardEnemyBehavior enemy = null)
     {
+        // Логика обновления состояния при патрулировании, если необходимо
         throw new System.NotImplementedException();
     }
 

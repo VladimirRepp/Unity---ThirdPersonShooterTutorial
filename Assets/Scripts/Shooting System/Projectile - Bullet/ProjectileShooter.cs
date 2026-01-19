@@ -26,6 +26,10 @@ public class ProjectileShooter : MonoBehaviour, IShooter
 
     public void Shoot()
     {
+        // todo: при прицеливаннии учитывать разброс
+        // todo: учитывать правильную колизию со стенами и тригеррами при стрельбе
+        // Сейчас пули могут неверно работать с тригерамми (зоной атаки игрока врагом) и стенами 
+
         Vector3 aimPoint = GetAimPointFromCamera();
         Vector3 direction = (aimPoint - shootPoint.position).normalized;
 

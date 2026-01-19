@@ -227,6 +227,11 @@ public class SimpleEnemyBehavior : MonoBehaviour
         this.enabled = false;
     }
 
+    /// <summary>
+    /// Только визуальная реализация состояния получения урона
+    /// Логика получения урона реализована в классе DamageableObject
+    /// Наносит урон тот, кто вызывает метод TakeDamage у DamageableObject
+    /// </summary>
     private void TakeDamageState()
     {
         _isLockChangeState = true;

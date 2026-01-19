@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c079a8ef19c43a4adcbd35ed31c0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
-  maxHealth: 10
+  maxHealth: 100
   hitEffect: {fileID: 6146335168844286855, guid: 1916d3443b3f048fcb07ab96b7409d50, type: 3}
   isDestroyAfterDeath: 0
   destroyDelay: 2
@@ -3050,7 +3050,7 @@ GameObject:
   - component: {fileID: 890407299}
   - component: {fileID: 890407301}
   - component: {fileID: 890407300}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3975,6 +3975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player - ThirdPerson
       objectReference: {fileID: 0}
+    - target: {fileID: 7664667917112435113, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
+      propertyPath: bulletSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 7780869818254232940, guid: ffac83c3a4a994d9b807e3d38dfd38df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.99
@@ -4217,7 +4221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c079a8ef19c43a4adcbd35ed31c0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
-  maxHealth: 10
+  maxHealth: 100
   hitEffect: {fileID: 6146335168844286855, guid: 1916d3443b3f048fcb07ab96b7409d50, type: 3}
   isDestroyAfterDeath: 0
   destroyDelay: 2
@@ -4846,7 +4850,7 @@ GameObject:
   - component: {fileID: 1473921620}
   - component: {fileID: 1473921622}
   - component: {fileID: 1473921621}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6039,7 +6043,7 @@ GameObject:
   - component: {fileID: 1876199668}
   - component: {fileID: 1876199667}
   - component: {fileID: 1876199666}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8318,7 +8322,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2104100205}
   - component: {fileID: 2104100206}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Hint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8375,7 +8379,7 @@ GameObject:
   - component: {fileID: 2121682595}
   - component: {fileID: 2121682596}
   - component: {fileID: 2121682597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Interaction Door
   m_TagString: InerectiveDoor
   m_Icon: {fileID: 0}
@@ -9043,7 +9047,7 @@ GameObject:
   - component: {fileID: 7038303331822812506}
   - component: {fileID: 5064830902663629200}
   - component: {fileID: 1055724723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9233,7 +9237,7 @@ GameObject:
   - component: {fileID: 3761518801182159967}
   - component: {fileID: 8277155871390762350}
   - component: {fileID: 3124346383663492067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: doorL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9325,7 +9329,7 @@ GameObject:
   - component: {fileID: 5176232765712104681}
   - component: {fileID: 693509352058611409}
   - component: {fileID: 2328134989656585446}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: doorR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
